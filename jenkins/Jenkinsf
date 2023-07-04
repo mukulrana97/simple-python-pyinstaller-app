@@ -1,0 +1,12 @@
+pipeline {
+    agent {
+        label 'Test_Phyton'
+    }
+    stages {
+        stage('Test_Phyton') {
+            steps {
+                sh 'python -m py_compile sources/Test.py'
+            }
+        }
+    }
+}
