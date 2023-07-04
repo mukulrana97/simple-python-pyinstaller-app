@@ -1,11 +1,10 @@
 pipeline {
-    agent {
-        label 'Test_Phyton'
-    }
+    agent any
+
     stages {
-        stage('Test_Phyton') {
+        stage('Hello') {
             steps {
-                sh 'python -m py_compile sources/Test.py'
+                echo 'Hello World'
             }
         }
     }
